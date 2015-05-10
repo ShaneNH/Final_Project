@@ -47,15 +47,16 @@ public:
 	void pop2() {
 		minor.pop();
 	}
-	 
+
+
 	void update(int clock) {
-		int bum = ran.next_int(2000);
+		int bum = ran.next_double();
 		if (bum < arrival_rate && numbeingserved < 2000)
 		{
 			numbeingserved++;
 			int index_patient;
 			do {
-				index_patient = ran.next_int(humans.size());
+				index_patient = ran.next_int(humans.size() - 1);
 			} while (humans[index_patient]->serving);
 			humans[index_patient]->serving = true;
 			humans[index_patient]->arrival_patient = clock;

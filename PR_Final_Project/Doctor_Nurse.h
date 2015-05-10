@@ -14,13 +14,15 @@ public:
 	Doctor() {
 
 	}
+
 	Patient_data* beginpatients(int clock, Check_In* check) {
 		if (!currentpatient.empty())
 		{
-			Patient * guy = currentpatient.front();
+			Patient* guy = currentpatient.front();
 			if ((clock - guy->start_treatment) > guy->total_time)
 			{
 				check->dropserved();
+				guy->finished_treatment = clock;
 				guy->serving = false;
 				int time;
 				time = clock - guy->arrival_patient;
@@ -44,6 +46,7 @@ public:
 			else {
 				if (!check->empty()) {
 					Patient *patient = check->front();
+					check->pop2();
 					patient->start_treatment = clock;
 					patient->total_time = ran.next_int(19) + 1;
 					currentpatient.push(patient);
@@ -56,7 +59,7 @@ public:
 
 class Nurse : public Fantastic_Two {
 public:
-	Nurse() {};
+	Nurse() {}
 
 	Patient_data* beginpatients(int clock, Check_In* check) {
 		if (!currentpatient.empty())

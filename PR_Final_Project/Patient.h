@@ -21,6 +21,7 @@ public:
 		total_time(-1) {
 
 	}
+
 	string getname() {
 		return name;
 	}

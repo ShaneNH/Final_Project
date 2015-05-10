@@ -4,7 +4,7 @@
 #include "Check_In.h"
 #include "Patient.h"
 #include <queue>
-using namespace std;
+
 
 class Fantastic_Two {
 protected:
