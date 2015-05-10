@@ -14,6 +14,7 @@ int main() {
 	h.enter_data();
 	h.run_simulation();
 	h.show_stats();
+	h.post_simulation();
 
 
 }

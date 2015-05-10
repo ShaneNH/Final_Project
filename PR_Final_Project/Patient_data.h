@@ -11,16 +11,18 @@ public:
 	int patient_visits;
 	int total_wait_time_patient;
 	vector<int> injury;
-
+	friend class Emergency_Room;
 
 	Patient_data() {
 		name = " ";
 		patient_visits = 0;
 		total_wait_time_patient = 0;
 	}
-	/*double average_waiting() {
+
+	double average_waiting() {
 		return 1.0 * total_wait_time_patient / patient_visits;
-	}*/
+	}
+
 	Patient_data(std::string name, int time, int severity){
 		this->name = name;
 		patient_visits = 1;

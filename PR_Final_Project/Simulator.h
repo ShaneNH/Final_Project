@@ -3,11 +3,13 @@
 #include "Emergency_Room.h"
 #include "Check_In.h"
 #include "Random.h"
+#include <map>
 #include <iostream>
 #include <string>
 #include <stdexcept>
 #include <limits>
 #include <ios>
+#include <string>
 
 Random ran;
 
@@ -72,11 +74,28 @@ public:
 		std::cout << "Number of patients served: " << em->get_served() << std::endl;
 		std::cout << "Total time waited by patients (min): " << em->get_wait() << std::endl;
 		double average_time = 1.0 * em->get_wait() / em->get_served();
-		std::cout << "Average visit time per patient (min)" << average_time  << std::endl;
+		std::cout << "Average visit time per patient (min): " << average_time  << std::endl;
+		std::cout << std::endl;
 	}
 
 	void post_simulation(){
+		int user;
+		do {
+			std::cout << "Would you Like to see the patients served at the hospital? Enter: 1" << std::endl;
+			std::cout << "Else search for an individual served at the hospital? Enter: 2 " << std::endl;
+			std::cout << "Enter 3 to exit the program" << endl;
+			cin >> user;
+			std::cout << std::endl;
 
+			if (user == 1) {
+				em->seeserved();
+			}
+			if(user == 2) {
+				em->findbyname();
+			}
+		} while (user != 3);
+			
+			
 	}
 };
 #endif
