@@ -1,9 +1,8 @@
-﻿Build started 5/10/2015 11:03:21 AM.
+﻿Build started 5/10/2015 12:57:37 PM.
      1>Project "C:\Users\Jose\Documents\GitHub\Final_Project\PR_Final_Project\PR_Final_Project.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Hospital.cpp
          Hospital.cpp
-     1>c:\users\jose\documents\github\final_project\pr_final_project\check_in.h(53): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
      1>c:\users\jose\documents\github\final_project\pr_final_project\emergency_room.h(64): warning C4018: '<' : signed/unsigned mismatch
      1>c:\users\jose\documents\github\final_project\pr_final_project\emergency_room.h(111): warning C4018: '<' : signed/unsigned mismatch
        Link:
@@ -13,4 +12,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:09.02
+Time Elapsed 00:00:02.69

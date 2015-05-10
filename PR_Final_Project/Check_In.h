@@ -14,7 +14,7 @@ class Check_In {
 public:
 	double arrival_rate;
 	int numbeingserved;
-	priority_queue<Patient*, vector<Patient *>, Patient_Compare> minor;
+	priority_queue<Patient*, vector<Patient*>, Patient_Compare> minor;
 	priority_queue<Patient*, vector<Patient*>, Patient_Compare> serious;
 	vector<Patient *> humans;
 	friend class Emergency_Room;
@@ -47,10 +47,10 @@ public:
 	void pop2() {
 		minor.pop();
 	}
-
+	
 
 	void update(int clock) {
-		int bum = ran.next_double();
+		double bum = ran.next_double();
 		if (bum < arrival_rate && numbeingserved < 2000)
 		{
 			numbeingserved++;

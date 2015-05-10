@@ -5,8 +5,8 @@
 
 class Patient_Compare{
 public:
-	bool operator() (Patient* a, Patient* b) {
-		return (a->getillness() < b->getillness());
+	bool operator() (Patient* a,Patient* b) {
+		return (a->illness_rank < b->illness_rank);
 	}
 };
 #endif
