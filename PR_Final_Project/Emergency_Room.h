@@ -107,7 +107,7 @@ public:
 		if (it != patient_info.end()) {
 			cout << "Name: " << it->first << endl;
 			cout << "Number of times visited: " << it->second->patient_visits << endl;
-			cout << "List of porfile severties: " << endl;
+			cout << "List of profile severities: " << endl;
 			for (int s = 0; s < it->second->injury.size(); s++) {
 				cout << it->second->injury[s] << endl;
 			}
