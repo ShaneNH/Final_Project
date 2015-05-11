@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #define GET_NAMES_H_
+using namespace std;
 
 class get_names {
 private:

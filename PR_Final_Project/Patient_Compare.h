@@ -2,6 +2,7 @@
 #define PATIENT_COMPARE_H
 #include <iostream>
 #include "Patient.h"
+using namespace std;
 
 class Patient_Compare{
 public:
