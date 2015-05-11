@@ -10,6 +10,7 @@
 #include <limits>	
 #include <ios>
 #include <string>
+#include <stdexcept>
 
 Random ran;
 
@@ -90,9 +91,10 @@ public:
 			if (user == 1) {
 				em->seeserved();
 			}
-			if(user == 2) {
+			if (user == 2) {
 				em->findbyname();
 			}
+
 		} while (user != 3);
 			
 			

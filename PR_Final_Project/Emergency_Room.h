@@ -5,6 +5,7 @@
 #include <map>
 #include <string>
 #include <queue>
+#include <stdexcept>
 #include "Patient_data.h"
 #include "Fantastic_Two.h"
 #include "Doctor_Nurse.h"
