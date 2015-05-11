@@ -62,19 +62,19 @@ public:
 			humans[index_patient]->arrival_patient = clock;
 			int serverity;
 			int serverity1;
-			serverity = ran.next_int(9);
+			serverity = ran.next_int(10);
 			if (serverity < 7) {
-				serverity1 = ran.next_int(9) + 1;
+				serverity1 = ran.next_int(10) + 1;
 				humans[index_patient]->illness_rank = serverity1;
 				minor.push(humans[index_patient]);
 			}
 			else if (serverity < 9) {
-				serverity1 = ran.next_int(4) + 11;
+				serverity1 = ran.next_int(5) + 11;
 				humans[index_patient]->illness_rank = serverity1;
 				serious.push(humans[index_patient]);
 			}
 			else {
-				serverity1 = ran.next_int(4) + 16;
+				serverity1 = ran.next_int(5) + 16;
 				humans[index_patient]->illness_rank = serverity1;
 				serious.push(humans[index_patient]);
 			}
