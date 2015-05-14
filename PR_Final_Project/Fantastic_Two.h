@@ -8,8 +8,10 @@ using namespace std;
 
 class Fantastic_Two {
 protected:
+	// queue to set the current patients to be served
 	queue<Patient*> currentpatient;
 public:
+	// Our Data Abstract Class and Base Class
 	virtual Patient_data* beginpatients(int clock, Check_In* check) = 0;
 	virtual void startnewpatient(int clock, Check_In* check) = 0;
 };

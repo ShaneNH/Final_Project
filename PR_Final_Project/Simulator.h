@@ -16,6 +16,7 @@ Random ran;
 
 class Simulator {
 private:
+	// Properties for simulator class
 	int total_time = 10080;
 	int clock;
 	Check_In* check;
@@ -47,11 +48,12 @@ private:
 		}
 	}
 public:
+	// Default constructor
 	Simulator(std::vector<Patient*> people) {
 		check = new Check_In(people);
 		em = new Emergency_Room();
 	}
-
+	// Lets the user enter the information they want
 	void enter_data() {
 		std::cout << "Welcome to CS273ville Hospital\n";
 		int rate = read_int("Please enter arrival rate (patients/hour): ", 1, 60);
@@ -63,14 +65,14 @@ public:
 		em->set_Doctors_available(num_doctors);
 		em->setWaitingRoom(check);
 	}
-
+	// runs the simulation
 	void run_simulation() {
 		for (clock = 0; clock < total_time; clock++) {
 			check->update(clock);
 			em->run_emergency(clock);
 		}
 	}
-
+	// shows the results 
 	void show_stats() {
 		std::cout << "Number of patients served: " << em->get_served() << std::endl;
 		std::cout << "Total time waited by patients (min): " << em->get_wait() << std::endl;
@@ -78,7 +80,7 @@ public:
 		std::cout << "Average visit time per patient (min): " << average_time  << std::endl;
 		std::cout << std::endl;
 	}
-
+	// Menu for post-simulation
 	void post_simulation(){
 		int user;
 		do {
